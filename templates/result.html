@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kết quả</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Bạn thuộc nhà: {{ house }} 🎉</h1>
+    <p>Kết quả điểm số:</p>
+    <ul>
+        {% for h, s in scores.items() %}
+            <li>{{ h }}: {{ s }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">👉 Làm lại quiz</a>
+</body>
+</html>
